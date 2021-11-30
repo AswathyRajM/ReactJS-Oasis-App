@@ -45,7 +45,6 @@ function PersonalInfoForm() {
     const styles = {
         boxContainer: {
             width: "26.625rem",
-            height: "fit-content",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",

@@ -1,6 +1,9 @@
 import { ThemeProvider } from "@emotion/react";
 import { Grid, Typography, createTheme } from "@mui/material";
 
+import logo from "../images/logo.svg";
+import "./LogoComponent.css";
+
 const theme = createTheme({
     spacing: 8,
 });
@@ -10,9 +13,10 @@ theme.typography.body1 = {
     textAlign: "left",
     display: "flex",
     alignItems: "center",
+    color: "#fff",
 };
 
-function LogoComponent(props) {
+function LogoComponent() {
     return (
         <ThemeProvider theme={theme}>
             <Grid
@@ -22,21 +26,11 @@ function LogoComponent(props) {
                 alignItems="flex-start"
             >
                 <Grid item>
-                    <img src={props.logo} alt="logo" />
+                    <img src={logo} alt="logo" />
                 </Grid>
-                {props.theme ? (
-                    <Grid item my={"auto"}>
-                        <Typography color="#1565D8" className={"logo-text"}>
-                            Oasis
-                        </Typography>
-                    </Grid>
-                ) : (
-                    <Grid item my={"auto"}>
-                        <Typography color="#fff" className={"logo-text"}>
-                            Oasis
-                        </Typography>
-                    </Grid>
-                )}
+                <Grid item my={"auto"}>
+                    <Typography className={"logo-text"}>Oasis</Typography>
+                </Grid>
             </Grid>
         </ThemeProvider>
     );

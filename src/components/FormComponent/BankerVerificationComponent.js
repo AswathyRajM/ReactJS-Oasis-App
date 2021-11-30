@@ -1,7 +1,6 @@
 import React from "react";
 import { styled } from "@mui/material/styles";
 import {
-    Avatar,
     Button,
     FormControl,
     Grid,
@@ -19,14 +18,8 @@ import LockIcon from "../../images/lock.svg";
 import checkImage from "../../images/circle-check-full.png";
 
 function BankVerification() {
-    const [country, setcountry] = React.useState(0);
-    const handleChange = (event) => {
-        setcountry(event.target.value);
-    };
     const styles = {
         boxContainer: {
-            width: "26.625rem",
-            height: "fit-content",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
@@ -136,7 +129,7 @@ function BankVerification() {
                                             aria-label="toggle password visibility"
                                             edge="end"
                                         >
-                                            <img src={checkImage} />
+                                            <img src={checkImage} alt="img" />
                                         </IconButton>
                                     </InputAdornment>
                                 }
@@ -170,6 +163,7 @@ function BankVerification() {
                                         width: "10px",
                                         paddingRight: "10px",
                                     }}
+                                    alt="img0"
                                 />
                                 Your info is safely secured
                             </Typography>

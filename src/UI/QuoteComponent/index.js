@@ -1,45 +1,43 @@
 import { createTheme, Grid, Stack, Typography } from "@mui/material";
 import React from "react";
 import { Box } from "@mui/system";
-import { ThemeProvider } from "@emotion/react";
-import "./index.css";
-
 import quotesImg from "../../images/quotes-img.png";
 import circleCheck from "../../images/circle-check-full.png";
 import vectorLImg from "../../images/Vector-L.png";
 import circlesImg from "../../images/Vector-circles.png";
-import Logo from "../../UI/LogoComponent";
+import { ThemeProvider } from "@emotion/react";
 
-import logo from "../../images/logo.svg";
+import Logo from "../../UI/LogoComponent";
 import buildingImage from "../../images/buildings.jpg";
+import "./index.css";
+
+const theme = createTheme();
+
+theme.typography.body1 = {
+    fontStyle: "normal",
+    textAlign: "left",
+    display: "flex",
+    alignItems: "center",
+    color: "#fff",
+};
+
+const styles = {
+    boxConatiner: {
+        height: "100%",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        width: "",
+        background: `linear-gradient(0deg, rgba(21, 101, 216, 0.9), rgba(21, 101, 216, 0.9)),url(${buildingImage})`,
+        backgroundPosition: "center",
+        backgroundRepeat: "no-epeat",
+        backgroundSize: "cover",
+        margin: 0,
+        padding: 0,
+    },
+};
 
 function QuoteComponent() {
-    const theme = createTheme();
-
-    theme.typography.body1 = {
-        fontStyle: "normal",
-        textAlign: "left",
-        display: "flex",
-        alignItems: "center",
-        color: "#fff",
-    };
-
-    const styles = {
-        boxConatiner: {
-            height: "100%",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            width: "",
-            background: `linear-gradient(0deg, rgba(21, 101, 216, 0.9), rgba(21, 101, 216, 0.9)),url(${buildingImage})`,
-            backgroundPosition: "center",
-            backgroundRepeat: "no-epeat",
-            backgroundSize: "cover",
-            margin: 0,
-            padding: 0,
-        },
-    };
-
     return (
         <ThemeProvider theme={theme}>
             <Box
@@ -67,7 +65,7 @@ function QuoteComponent() {
                                 top: { lg: "3rem", xs: "2.5rem" },
                             }}
                         >
-                            <Logo theme={false} logo={logo} />
+                            <Logo />
                         </Box>
                         <Grid item>
                             <img src={quotesImg} alt="img" />

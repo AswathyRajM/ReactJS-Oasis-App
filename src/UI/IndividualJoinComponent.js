@@ -53,6 +53,7 @@ function JoinContainer(props) {
                                 width: "3.25rem",
                                 maxWidth: "52px",
                             }}
+                            alt="img"
                         />
                         <ThemeProvider theme={theme}>
                             <Stack spacing={0.3}>
@@ -91,6 +92,7 @@ function JoinContainer(props) {
                                         maxWidth: "14px",
                                     }}
                                     src={rightArrowIcon}
+                                    alt="img"
                                 />
                             ) : (
                                 ""

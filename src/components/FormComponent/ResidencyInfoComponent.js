@@ -1,12 +1,8 @@
 import React from "react";
 import { styled } from "@mui/material/styles";
 import {
-    Avatar,
     Button,
-    Checkbox,
     FormControl,
-    FormControlLabel,
-    FormGroup,
     Grid,
     MenuItem,
     OutlinedInput,
@@ -30,7 +26,6 @@ function ResidencyInfo() {
     const styles = {
         boxContainer: {
             width: "26.625rem",
-            height: "fit-content",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
@@ -204,6 +199,7 @@ function ResidencyInfo() {
                                         width: "10px",
                                         paddingRight: "10px",
                                     }}
+                                    alt="img"
                                 />
                                 Your info is safely secured
                             </Typography>

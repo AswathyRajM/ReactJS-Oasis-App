@@ -41,6 +41,7 @@ function TextAboutPage(props) {
                                         width: "20px",
                                         height: "20px",
                                     }}
+                                    alt="img0"
                                 />
                             </div>
 
