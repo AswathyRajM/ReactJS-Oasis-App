@@ -2,8 +2,10 @@ import { useState } from "react";
 import { createTheme, Grid, Stack, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import { ThemeProvider } from "@emotion/react";
+import { Link, NavLink } from "react-router-dom";
 
 import rightArrowIcon from "../../images/right-arrow.svg";
+import { useNavigate } from "react-router-dom";
 
 const theme = createTheme({
     typography: {
@@ -14,12 +16,13 @@ const theme = createTheme({
 
 function JoinContainer(props) {
     const [hover, setHover] = useState(false);
+    const navigate = useNavigate();
 
     const { iconImg, iconImgOnHover, subTitle, paragraph, type } = props;
 
     const userUrl = hover ? iconImgOnHover : iconImg;
     return (
-        <>
+        <div onClick={() => navigate("/personal-info")}>
             <Box
                 sx={{
                     backgroundColor: "#F5F9FF",
@@ -97,7 +100,7 @@ function JoinContainer(props) {
                     </Box>
                 </div>
             </Box>
-        </>
+        </div>
     );
 }
 

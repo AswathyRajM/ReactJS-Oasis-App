@@ -22,13 +22,7 @@ const styles = {
     },
 };
 
-function JoinUsForm() {
-    const userSubTitle = "Individual";
-    const userParagraph = "Personal account to manage all you activities.";
-    const businessSubTitle = "Business";
-    const businessParagraph = "Own or belong to a company, this is for you.";
-    const title = "Already have an account?";
-    const signin = true;
+function PersonalInfoForm() {
 
     return (
         <Box
@@ -131,4 +125,4 @@ function JoinUsForm() {
     );
 }
 
-export default JoinUsForm;
+export default PersonalInfoForm;
