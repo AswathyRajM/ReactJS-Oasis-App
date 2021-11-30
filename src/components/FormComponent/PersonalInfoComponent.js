@@ -9,17 +9,41 @@ import {
     FormGroup,
     Grid,
     OutlinedInput,
+    InputAdornment,
     Stack,
     Typography,
 } from "@mui/material";
 import { Box } from "@mui/system";
 import { useNavigate } from "react-router-dom";
+import IconButton from "@mui/material/IconButton";
+import Visibility from "@mui/icons-material/Visibility";
+import VisibilityOff from "@mui/icons-material/VisibilityOff";
 
 import TextAboutPage from "../../UI/TextAboutPage";
 import "./index.css";
 
 function PersonalInfoForm() {
     const navigate = useNavigate();
+
+    const [values, setValues] = React.useState({
+        showPassword: false,
+    });
+
+    const handleChange = (prop) => (event) => {
+        setValues({ ...values, [prop]: event.target.value });
+    };
+
+    const handleClickShowPassword = () => {
+        setValues({
+            ...values,
+            showPassword: !values.showPassword,
+        });
+    };
+
+    const handleMouseDownPassword = (event) => {
+        event.preventDefault();
+    };
+
     const styles = {
         boxContainer: {
             width: "26.625rem",
@@ -115,7 +139,7 @@ function PersonalInfoForm() {
                                     lineHeight: "20px",
                                     fontSize: "18px",
                                     color: "#8692A6",
-                                    marginBottom: "10px",
+                                    marginBottom: "1.5rem",
                                     paddingRight: "80px",
                                 }}
                             >
@@ -154,13 +178,38 @@ function PersonalInfoForm() {
                             <label className={"form-label"} htmlFor="password">
                                 Create password*
                             </label>
-                            <OutlinedInput
+                            {/* <OutlinedInput
                                 id="password"
                                 aria-describedby="outlined-weight-helper-text"
                                 fullWidth
                                 placeholder="Enter new password"
                                 required
                                 sx={styles.inputBoxShadow}
+                            /> */}
+
+                            <OutlinedInput
+                                id="outlined-adornment-password"
+                                type={values.showPassword ? "text" : "password"}
+                                value={values.password}
+                                onChange={handleChange("password")}
+                                endAdornment={
+                                    <InputAdornment position="end">
+                                        <IconButton
+                                            aria-label="toggle password visibility"
+                                            onClick={handleClickShowPassword}
+                                            onMouseDown={
+                                                handleMouseDownPassword
+                                            }
+                                            edge="end"
+                                        >
+                                            {values.showPassword ? (
+                                                <Typography>Hide</Typography>
+                                            ) : (
+                                                <Typography>Show</Typography>
+                                            )}
+                                        </IconButton>
+                                    </InputAdornment>
+                                }
                             />
                         </FormControl>
                         <FormGroup>

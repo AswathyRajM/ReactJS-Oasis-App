@@ -87,7 +87,7 @@ function JoinUsForm() {
                                     lineHeight: "20px",
                                     fontSize: "18px",
                                     color: "#8692A6",
-                                    marginBottom: "10px",
+                                    marginBottom: "1.5rem",
                                     paddingRight: "80px",
                                 }}
                             >

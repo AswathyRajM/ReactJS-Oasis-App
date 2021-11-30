@@ -20,7 +20,7 @@ import { useNavigate } from "react-router-dom";
 import TextAboutPage from "../../UI/TextAboutPage";
 import "./index.css";
 
-function ResidencyInfo() {
+function BankVerification() {
     const navigate = useNavigate();
     const [country, setcountry] = React.useState(0);
     const handleChange = (event) => {
@@ -54,7 +54,7 @@ function ResidencyInfo() {
     }));
 
     const title = "Residency Info";
-    const subText = "STEP 02/03";
+    const subText = "STEP 03/03";
 
     return (
         <Box
@@ -124,7 +124,7 @@ function ResidencyInfo() {
                         </Grid>
                         <FormControl variant="outlined" sx={{ my: 1 }}>
                             <label className={"form-label"} htmlFor="name">
-                                Phone number
+                                Bank verification number (BVN)
                             </label>
                             <OutlinedInput
                                 id="name"
@@ -135,39 +135,6 @@ function ResidencyInfo() {
                                 required
                                 sx={styles.inputBoxShadow}
                             />
-                        </FormControl>
-                        <FormControl variant="outlined" sx={{ my: 1 }}>
-                            <label className={"form-label"} htmlFor="email">
-                                Your address
-                            </label>
-                            <OutlinedInput
-                                id="email"
-                                aria-describedby="outlined-weight-helper-text"
-                                fullWidth
-                                placeholder="Please enter address"
-                                required
-                                sx={styles.inputBoxShadow}
-                            />
-                        </FormControl>
-
-                        <FormControl sx={{ my: 1, minWidth: 120 }}>
-                            <label className={"form-label"} htmlFor="password">
-                                Country of residence
-                            </label>
-                            <Select
-                                disableUnderline
-                                inputProps={{ "aria-label": "Without label" }}
-                                value={country}
-                                onChange={handleChange}
-                                sx={{ color: "#8692A6" }}
-                            >
-                                <MenuItem value={0} disabled>
-                                    Please Select
-                                </MenuItem>
-                                <MenuItem value={10}>Ten</MenuItem>
-                                <MenuItem value={20}>Twenty</MenuItem>
-                                <MenuItem value={30}>Thirty</MenuItem>
-                            </Select>
                         </FormControl>
 
                         <ColorButton
@@ -197,4 +164,10 @@ function ResidencyInfo() {
     );
 }
 
-export default ResidencyInfo;
+export default BankVerification;
+
+
+// <Avatar
+// sx={{ paddingRight: "3rem" }}
+// src="https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-webinar-optimizing-for-success-google-business-webinar-13.png"
+// />
