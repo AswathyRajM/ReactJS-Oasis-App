@@ -1,16 +1,16 @@
 import { createTheme, Grid, Stack, Typography } from "@mui/material";
 import React from "react";
 import { Box } from "@mui/system";
+import { ThemeProvider } from "@emotion/react";
 import "./index.css";
 
 import quotesImg from "../../images/quotes-img.png";
 import circleCheck from "../../images/circle-check-full.png";
 import vectorLImg from "../../images/Vector-L.png";
 import circlesImg from "../../images/Vector-circles.png";
-import { ThemeProvider } from "@emotion/react";
-
 import Logo from "../../UI/LogoComponent";
 
+import logo from "../../images/logo.svg";
 import buildingImage from "../../images/buildings.jpg";
 
 function QuoteComponent() {
@@ -67,7 +67,7 @@ function QuoteComponent() {
                                 top: { lg: "3rem", xs: "2.5rem" },
                             }}
                         >
-                            <Logo />
+                            <Logo theme={false} logo={logo} />
                         </Box>
                         <Grid item>
                             <img src={quotesImg} alt="img" />
