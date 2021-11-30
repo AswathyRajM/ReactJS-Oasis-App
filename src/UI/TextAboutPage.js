@@ -32,7 +32,7 @@ function TextAboutPage(props) {
                                     cursor: "pointer",
                                 }}
                                 color="#8692A6"
-                                onClick={() => navigate("/")}
+                                onClick={() => navigate(-1)}
                             >
                                 <div style={{ width: "20px", height: "20px" }}>
                                     <img

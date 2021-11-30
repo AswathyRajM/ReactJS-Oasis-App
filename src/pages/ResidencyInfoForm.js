@@ -1,12 +1,8 @@
-import React from 'react'
+import React from "react";
+import ResidencyInfoComponent from "../components/FormComponent/ResidencyInfoComponent";
 
 function ResidencyInfoForm() {
-    return (
-        <div>
-            ResidencyInfoForm
-ResidencyInfoForm
-        </div>
-    )
+    return <ResidencyInfoComponent />;
 }
 
-export default ResidencyInfoForm
+export default ResidencyInfoForm;

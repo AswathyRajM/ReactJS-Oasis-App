@@ -88,7 +88,7 @@ function JoinUsForm() {
                                     fontSize: "18px",
                                     color: "#8692A6",
                                     marginBottom: "10px",
-                                    padding: 0,
+                                    paddingRight: "80px",
                                 }}
                             >
                                 To begin this journey, tell us what type of

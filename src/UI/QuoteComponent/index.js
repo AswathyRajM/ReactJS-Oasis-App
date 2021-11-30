@@ -46,7 +46,7 @@ function QuoteComponent() {
                 sx={{
                     maxWidth: "45vw",
                     width: "100%",
-                    height: "100vh",
+                    height: "110vh",
                     margin: 0,
                     padding: 0,
                 }}

@@ -18,7 +18,7 @@ import { useNavigate } from "react-router-dom";
 import TextAboutPage from "../../UI/TextAboutPage";
 import "./index.css";
 
-function PersonalInfoForm() {
+function ResidencyInfo() {
     const navigate = useNavigate();
     const styles = {
         boxContainer: {
@@ -54,8 +54,8 @@ function PersonalInfoForm() {
         },
     }));
 
-    const title = "Personal Info";
-    const subText = "STEP 01/03";
+    const title = "Residency Info";
+    const subText = "STEP 02/03";
 
     return (
         <Box
@@ -203,4 +203,4 @@ function PersonalInfoForm() {
     );
 }
 
-export default PersonalInfoForm;
+export default ResidencyInfo;
