@@ -17,7 +17,7 @@ function JoinContainer(props) {
     const [hover, setHover] = useState(false);
     const navigate = useNavigate();
 
-    const { iconImg, iconImgOnHover, subTitle, paragraph, type } = props;
+    const { iconImg, iconImgOnHover, subTitle, paragraph } = props;
 
     const userUrl = hover ? iconImgOnHover : iconImg;
     return (

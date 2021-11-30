@@ -2,7 +2,6 @@ import { ThemeProvider } from "@emotion/react";
 import { Grid, Typography, createTheme } from "@mui/material";
 
 import logo from "../images/logo.svg";
-import "./LogoComponent.css";
 
 const theme = createTheme({
     spacing: 8,

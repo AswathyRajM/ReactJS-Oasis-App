@@ -1,4 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
+@font-face {
+    font-family: "Gilroy";
+    src: url("./fonts/Gilroy-Light.woff") format("woff"),
+        url("./fonts/Gilroy-Light.woff2") format("woff2");
+}
 
 body {
     margin: 0;

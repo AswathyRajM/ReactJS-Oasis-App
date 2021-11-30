@@ -1,5 +1,4 @@
-import { Grid } from "@mui/material";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar/index";
 import BankVerificationForm from "./pages/BankVerificationForm";

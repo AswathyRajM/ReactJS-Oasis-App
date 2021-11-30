@@ -13,33 +13,33 @@ import Logo from "../../UI/LogoComponent";
 
 import buildingImage from "../../images/buildings.jpg";
 
-const theme = createTheme();
-
-theme.typography.body1 = {
-    fontStyle: "normal",
-    textAlign: "left",
-    display: "flex",
-    alignItems: "center",
-    color: "#fff",
-};
-
-const styles = {
-    boxConatiner: {
-        height: "100%",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        width: "",
-        background: `linear-gradient(0deg, rgba(21, 101, 216, 0.9), rgba(21, 101, 216, 0.9)),url(${buildingImage})`,
-        backgroundPosition: "center",
-        backgroundRepeat: "no-epeat",
-        backgroundSize: "cover",
-        margin: 0,
-        padding: 0,
-    },
-};
-
 function QuoteComponent() {
+    const theme = createTheme();
+
+    theme.typography.body1 = {
+        fontStyle: "normal",
+        textAlign: "left",
+        display: "flex",
+        alignItems: "center",
+        color: "#fff",
+    };
+
+    const styles = {
+        boxConatiner: {
+            height: "100%",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            width: "",
+            background: `linear-gradient(0deg, rgba(21, 101, 216, 0.9), rgba(21, 101, 216, 0.9)),url(${buildingImage})`,
+            backgroundPosition: "center",
+            backgroundRepeat: "no-epeat",
+            backgroundSize: "cover",
+            margin: 0,
+            padding: 0,
+        },
+    };
+
     return (
         <ThemeProvider theme={theme}>
             <Box

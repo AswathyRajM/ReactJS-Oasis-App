@@ -83,21 +83,18 @@ function PersonalInfoForm() {
         <Box
             sx={{
                 position: "absolute",
-                left: "44vw",
+                left: "45vw",
                 top: 0,
                 bottom: 0,
                 right: 0,
                 margin: 0,
                 marginRight: "1rem",
                 padding: 0,
-                height: "fit-content",
             }}
         >
             <TextAboutPage title={title} subText={subText} />
             <Box
                 sx={{
-                    maxWidth: "45vw",
-                    width: "100%",
                     height: {
                         lg: "calc(100vh - 5rem)",
                         xs: "calc(100vh - 3rem)",
@@ -110,10 +107,14 @@ function PersonalInfoForm() {
                     <Stack
                         sx={{
                             width: "100%",
-                            maxWidth: "27.5rem",
-                            marginLeft: { lg: "4rem", xs: "2.5rem" },
-                            paddingX: { lg: "6rem", xs: "2.5rem" },
-                            paddingY: { lg: "1rem", xs: ".5rem" },
+                            maxWidth: "25.5rem",
+                            paddingX: {
+                                lg: "10rem",
+                                md: "6rem",
+                                sm: "4rem",
+                                xs: "2rem",
+                            },
+                            paddingLeft: "12rem",
                         }}
                     >
                         <Grid item>
@@ -175,7 +176,7 @@ function PersonalInfoForm() {
                                 sx={styles.inputBoxShadow}
                             />
                         </FormControl>
-                        
+
                         <FormControl variant="outlined" sx={{ my: 1 }}>
                             <label className={"form-label"} htmlFor="password">
                                 Create password*
@@ -241,7 +242,6 @@ function PersonalInfoForm() {
                         >
                             Register with Google
                         </NoBorderButton>
-                        
                     </Stack>
                 </Box>
             </Box>

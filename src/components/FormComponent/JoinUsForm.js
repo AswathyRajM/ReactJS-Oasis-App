@@ -13,12 +13,9 @@ import businessIconOnHover from "../../images/Polygon-briefcase-hover.svg";
 const styles = {
     boxContainer: {
         width: "26.625rem",
-        height: "fit-content",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        height: "100vh",
-        margin: "auto",
     },
 };
 
@@ -34,20 +31,19 @@ function JoinUsForm() {
         <Box
             sx={{
                 position: "absolute",
-                left: "44vw",
+                left: "45vw",
                 top: 0,
                 bottom: 0,
                 right: 0,
                 margin: 0,
                 marginRight: "1rem",
                 padding: 0,
-                height: "fit-content",
             }}
         >
             <TextAboutPage title={title} signin={signin} />
             <Box
                 sx={{
-                    maxWidth: "45vw",
+                    maxWidth: "20vw",
                     width: "100%",
                     height: {
                         lg: "calc(100vh - 5rem)",
@@ -61,9 +57,15 @@ function JoinUsForm() {
                     <Stack
                         sx={{
                             width: "100%",
-                            maxWidth: "29.5rem",
-                            marginLeft: { lg: "4rem", xs: "2.5rem" },
-                            padding: { lg: "6rem", xs: "2.5rem" },
+                            maxWidth: "25.5rem",
+                            paddingX: {
+                                lg: "10rem",
+                                md: "6rem",
+                                sm: "4rem",
+                                xs: "2rem",
+                            },
+                            paddingLeft: "12rem",
+                            paddingTop: "10rem",
                         }}
                     >
                         <Grid item>
@@ -81,6 +83,7 @@ function JoinUsForm() {
                                 Join Us!
                             </Typography>
                         </Grid>
+
                         <Grid item>
                             <Typography
                                 sx={{
@@ -88,13 +91,13 @@ function JoinUsForm() {
                                     fontSize: "18px",
                                     color: "#8692A6",
                                     marginBottom: "1.5rem",
-                                    paddingRight: "80px",
                                 }}
                             >
                                 To begin this journey, tell us what type of
                                 account you’d be opening.
                             </Typography>
                         </Grid>
+
                         <Grid
                             container
                             direction="row"
@@ -109,7 +112,6 @@ function JoinUsForm() {
                             <Grid item>
                                 <Typography>
                                     <JoinBtnComponent
-                                        type={"indiidual"}
                                         iconImg={userIcon}
                                         iconImgOnHover={userIconHover}
                                         subTitle={userSubTitle}

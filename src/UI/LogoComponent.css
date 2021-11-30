@@ -1,9 +1,0 @@
-@font-face {
-    font-family: "Gilroy";
-    src: url("../fonts/Gilroy-Light.woff") format("woff"),
-        url("../fonts/Gilroy-Light.woff2") format("woff2");
-}
-
-.logo-text {
-    font-family: "Gilroy", "Inter", sans-serif !important;
-}

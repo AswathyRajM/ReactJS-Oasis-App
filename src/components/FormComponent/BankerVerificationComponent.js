@@ -57,7 +57,7 @@ function BankVerification() {
         <Box
             sx={{
                 position: "absolute",
-                left: "44vw",
+                left: "45vw",
                 top: 0,
                 bottom: 0,
                 right: 0,
@@ -84,10 +84,15 @@ function BankVerification() {
                     <Stack
                         sx={{
                             width: "100%",
-                            maxWidth: "27.5rem",
-                            marginLeft: { lg: "4rem", xs: "2.5rem" },
-                            paddingX: { lg: "6rem", xs: "2.5rem" },
-                            paddingY: { lg: "7rem", xs: "3.5rem" },
+                            maxWidth: "25.5rem",
+                            paddingX: {
+                                lg: "10rem",
+                                md: "6rem",
+                                sm: "4rem",
+                                xs: "2rem",
+                            },
+                            paddingLeft: "12rem",
+                            paddingTop: "10rem",
                         }}
                     >
                         <Grid item>
