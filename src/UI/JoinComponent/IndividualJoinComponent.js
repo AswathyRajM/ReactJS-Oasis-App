@@ -1,11 +1,10 @@
 import { useState } from "react";
-import { createTheme, Grid, Stack, Typography } from "@mui/material";
+import { createTheme, Stack, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import { ThemeProvider } from "@emotion/react";
-import { Link, NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import rightArrowIcon from "../../images/right-arrow.svg";
-import { useNavigate } from "react-router-dom";
 
 const theme = createTheme({
     typography: {

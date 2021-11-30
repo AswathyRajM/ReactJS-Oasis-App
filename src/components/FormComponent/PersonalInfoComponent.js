@@ -23,7 +23,8 @@ const styles = {
 };
 
 function PersonalInfoForm() {
-
+    const title = "Personal Info";
+    const subText = "STEP 01/03";
     return (
         <Box
             sx={{
@@ -38,7 +39,7 @@ function PersonalInfoForm() {
                 height: "fit-content",
             }}
         >
-            <TextAboutPage title={title} signin={signin} />
+            <TextAboutPage title={title} subText={subText} />
             <Box
                 sx={{
                     maxWidth: "45vw",
@@ -100,23 +101,7 @@ function PersonalInfoForm() {
                                 fontWeight: 500,
                             }}
                         >
-                            <Grid item>
-                                <Typography>
-                                    <JoinBtnComponent
-                                        type={"indiidual"}
-                                        iconImg={userIcon}
-                                        iconImgOnHover={userIconHover}
-                                        subTitle={userSubTitle}
-                                        paragraph={userParagraph}
-                                    />
-                                    <JoinBtnComponent
-                                        iconImg={businessIcon}
-                                        iconImgOnHover={businessIconOnHover}
-                                        subTitle={businessSubTitle}
-                                        paragraph={businessParagraph}
-                                    />
-                                </Typography>
-                            </Grid>
+                            <Grid item></Grid>
                         </Grid>
                     </Stack>
                 </Box>
