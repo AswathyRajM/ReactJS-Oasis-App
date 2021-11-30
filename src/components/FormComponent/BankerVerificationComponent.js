@@ -5,6 +5,8 @@ import {
     Button,
     FormControl,
     Grid,
+    IconButton,
+    InputAdornment,
     OutlinedInput,
     Stack,
     Typography,
@@ -14,6 +16,7 @@ import { Box } from "@mui/system";
 import TextAboutPage from "../../UI/TextAboutPage";
 import "./index.css";
 import LockIcon from "../../images/lock.svg";
+import checkImage from "../../images/circle-check-full.png";
 
 function BankVerification() {
     const [country, setcountry] = React.useState(0);
@@ -121,13 +124,17 @@ function BankVerification() {
                                 Bank verification number (BVN)
                             </label>
                             <OutlinedInput
-                                id="name"
-                                aria-describedby="outlined-weight-helper-text"
-                                fullWidth
-                                autoFocus
-                                placeholder="Enter your name"
-                                required
-                                sx={styles.inputBoxShadow}
+                                id="outlined-adornment-password"
+                                endAdornment={
+                                    <InputAdornment position="end">
+                                        <IconButton
+                                            aria-label="toggle password visibility"
+                                            edge="end"
+                                        >
+                                            <img src={checkImage} />
+                                        </IconButton>
+                                    </InputAdornment>
+                                }
                             />
                         </FormControl>
 

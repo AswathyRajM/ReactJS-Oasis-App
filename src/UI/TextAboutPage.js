@@ -70,7 +70,7 @@ function TextAboutPage(props) {
                         textAlign: "center",
                         display: "flex",
                         justifyContent: "flex-end",
-                        marginRight: { lg: "4rem", xs: "2.5rem" },
+                        marginRight: { lg: "4rem", xs: "0rem" },
                         fontSize: "16px",
                     }}
                 >

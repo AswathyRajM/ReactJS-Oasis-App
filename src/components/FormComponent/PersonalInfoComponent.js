@@ -131,6 +131,7 @@ function PersonalInfoForm() {
                                 Register Individual Account!
                             </Typography>
                         </Grid>
+
                         <Grid item>
                             <Typography
                                 sx={{
@@ -145,6 +146,7 @@ function PersonalInfoForm() {
                                 details are required.
                             </Typography>
                         </Grid>
+
                         <FormControl variant="outlined" sx={{ my: 1 }}>
                             <label className={"form-label"} htmlFor="name">
                                 Your fullname*
@@ -159,6 +161,7 @@ function PersonalInfoForm() {
                                 sx={styles.inputBoxShadow}
                             />
                         </FormControl>
+
                         <FormControl variant="outlined" sx={{ my: 1 }}>
                             <label className={"form-label"} htmlFor="email">
                                 Email address*
@@ -172,19 +175,11 @@ function PersonalInfoForm() {
                                 sx={styles.inputBoxShadow}
                             />
                         </FormControl>
+                        
                         <FormControl variant="outlined" sx={{ my: 1 }}>
                             <label className={"form-label"} htmlFor="password">
                                 Create password*
                             </label>
-                            {/* <OutlinedInput
-                                id="password"
-                                aria-describedby="outlined-weight-helper-text"
-                                fullWidth
-                                placeholder="Enter new password"
-                                required
-                                sx={styles.inputBoxShadow}
-                            /> */}
-
                             <OutlinedInput
                                 id="outlined-adornment-password"
                                 type={values.showPassword ? "text" : "password"}
@@ -210,12 +205,14 @@ function PersonalInfoForm() {
                                 }
                             />
                         </FormControl>
+
                         <FormGroup>
                             <FormControlLabel
                                 control={<Checkbox defaultChecked />}
                                 label="I agree to terms & conditions"
                             />
                         </FormGroup>
+
                         <ColorButton
                             onClick={() => navigate("/residency-info")}
                             sx={{
@@ -227,6 +224,7 @@ function PersonalInfoForm() {
                         >
                             Register Account
                         </ColorButton>
+
                         <NoBorderButton
                             variant="outlined"
                             sx={{
@@ -243,6 +241,7 @@ function PersonalInfoForm() {
                         >
                             Register with Google
                         </NoBorderButton>
+                        
                     </Stack>
                 </Box>
             </Box>
