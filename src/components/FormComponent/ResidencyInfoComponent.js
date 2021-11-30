@@ -18,6 +18,7 @@ import { Box } from "@mui/system";
 import { useNavigate } from "react-router-dom";
 
 import TextAboutPage from "../../UI/TextAboutPage";
+import LockIcon from "../../images/lock.svg";
 import "./index.css";
 
 function ResidencyInfo() {
@@ -90,7 +91,7 @@ function ResidencyInfo() {
                             maxWidth: "27.5rem",
                             marginLeft: { lg: "4rem", xs: "2.5rem" },
                             paddingX: { lg: "6rem", xs: "2.5rem" },
-                            paddingY: { lg: "1rem", xs: ".5rem" },
+                            paddingY: { lg: "2rem", xs: ".7rem" },
                         }}
                     >
                         <Grid item>
@@ -164,9 +165,9 @@ function ResidencyInfo() {
                                 <MenuItem value={0} disabled>
                                     Please Select
                                 </MenuItem>
-                                <MenuItem value={10}>Ten</MenuItem>
-                                <MenuItem value={20}>Twenty</MenuItem>
-                                <MenuItem value={30}>Thirty</MenuItem>
+                                <MenuItem value={10}>India</MenuItem>
+                                <MenuItem value={20}>Japan</MenuItem>
+                                <MenuItem value={30}>Russia</MenuItem>
                             </Select>
                         </FormControl>
 
@@ -181,15 +182,26 @@ function ResidencyInfo() {
                         >
                             Save & Continue
                         </ColorButton>
-                        <Typography
-                            sx={{
-                                color: "#8692A6",
-                                py: 2,
-                                marginX: "auto",
-                            }}
-                        >
-                            L Your info is safely secured
-                        </Typography>
+                        <Box display="flex">
+                            <Typography
+                                sx={{
+                                    color: "#8692A6",
+                                    py: 2,
+                                    marginX: "auto",
+                                    fontSize: "12px",
+                                }}
+                            >
+                                <img
+                                    src={LockIcon}
+                                    style={{
+                                        height: "14px",
+                                        width: "10px",
+                                        paddingRight: "10px",
+                                    }}
+                                />
+                                Your info is safely secured
+                            </Typography>
+                        </Box>
                     </Stack>
                 </Box>
             </Box>

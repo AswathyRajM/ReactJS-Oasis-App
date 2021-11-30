@@ -3,25 +3,19 @@ import { styled } from "@mui/material/styles";
 import {
     Avatar,
     Button,
-    Checkbox,
     FormControl,
-    FormControlLabel,
-    FormGroup,
     Grid,
-    MenuItem,
     OutlinedInput,
-    Select,
     Stack,
     Typography,
 } from "@mui/material";
 import { Box } from "@mui/system";
-import { useNavigate } from "react-router-dom";
 
 import TextAboutPage from "../../UI/TextAboutPage";
 import "./index.css";
+import LockIcon from "../../images/lock.svg";
 
 function BankVerification() {
-    const navigate = useNavigate();
     const [country, setcountry] = React.useState(0);
     const handleChange = (event) => {
         setcountry(event.target.value);
@@ -53,7 +47,7 @@ function BankVerification() {
         textTransform: "capitalize",
     }));
 
-    const title = "Residency Info";
+    const title = "Bank Verification";
     const subText = "STEP 03/03";
 
     return (
@@ -90,7 +84,7 @@ function BankVerification() {
                             maxWidth: "27.5rem",
                             marginLeft: { lg: "4rem", xs: "2.5rem" },
                             paddingX: { lg: "6rem", xs: "2.5rem" },
-                            paddingY: { lg: "1rem", xs: ".5rem" },
+                            paddingY: { lg: "7rem", xs: "3.5rem" },
                         }}
                     >
                         <Grid item>
@@ -138,7 +132,7 @@ function BankVerification() {
                         </FormControl>
 
                         <ColorButton
-                            onClick={() => navigate("/bankverification-info")}
+                            onClick={() => alert("Submitted!")}
                             sx={{
                                 marginTop: "20px",
                                 paddingY: "1rem",
@@ -148,15 +142,26 @@ function BankVerification() {
                         >
                             Save & Continue
                         </ColorButton>
-                        <Typography
-                            sx={{
-                                color: "#8692A6",
-                                py: 2,
-                                marginX: "auto",
-                            }}
-                        >
-                            L Your info is safely secured
-                        </Typography>
+                        <Box display="flex">
+                            <Typography
+                                sx={{
+                                    color: "#8692A6",
+                                    py: 2,
+                                    marginX: "auto",
+                                    fontSize: "12px",
+                                }}
+                            >
+                                <img
+                                    src={LockIcon}
+                                    style={{
+                                        height: "14px",
+                                        width: "10px",
+                                        paddingRight: "10px",
+                                    }}
+                                />
+                                Your info is safely secured
+                            </Typography>
+                        </Box>
                     </Stack>
                 </Box>
             </Box>
@@ -165,7 +170,6 @@ function BankVerification() {
 }
 
 export default BankVerification;
-
 
 // <Avatar
 // sx={{ paddingRight: "3rem" }}

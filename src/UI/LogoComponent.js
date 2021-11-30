@@ -1,8 +1,8 @@
 import { ThemeProvider } from "@emotion/react";
 import { Grid, Typography, createTheme } from "@mui/material";
-import { Box } from "@mui/system";
 
 import logo from "../images/logo.svg";
+import "./LogoComponent.css";
 
 const theme = createTheme({
     spacing: 8,
@@ -29,7 +29,7 @@ function LogoComponent() {
                     <img src={logo} alt="logo" />
                 </Grid>
                 <Grid item my={"auto"}>
-                    <Typography>Oasis</Typography>
+                    <Typography className={"logo-text"}>Oasis</Typography>
                 </Grid>
             </Grid>
         </ThemeProvider>

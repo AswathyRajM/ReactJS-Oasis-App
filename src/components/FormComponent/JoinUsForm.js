@@ -3,7 +3,7 @@ import { Grid, Stack, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 
 import TextAboutPage from "../../UI/TextAboutPage";
-import JoinBtnComponent from "../../UI/JoinComponent/IndividualJoinComponent";
+import JoinBtnComponent from "../../UI/IndividualJoinComponent";
 
 import userIcon from "../../images/Polygon-user.svg";
 import userIconHover from "../../images/Polygon-user-hover.svg";

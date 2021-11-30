@@ -4,7 +4,7 @@ import { Box } from "@mui/system";
 import { ThemeProvider } from "@emotion/react";
 import { useNavigate } from "react-router-dom";
 
-import rightArrowIcon from "../../images/right-arrow.svg";
+import rightArrowIcon from "../images/right-arrow.svg";
 
 const theme = createTheme({
     typography: {
